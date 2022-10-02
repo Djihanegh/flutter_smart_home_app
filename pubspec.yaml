@@ -45,6 +45,8 @@ dependencies:
   chopper: ^5.0.0
   chopper_generator: ^5.0.0+1
   json_serializable: ^6.4.1
+  logging: ^1.0.2
+  bloc: ^8.1.0
 
 dev_dependencies:
   flutter_test:
