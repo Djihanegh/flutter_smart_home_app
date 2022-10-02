@@ -1,15 +1,15 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:smart_home_app/utils/app_style.dart';
-import '../../../domain/entities/device.dart';
+import '../../../domain/entities/room.dart';
 import 'power_button.dart';
 
-class DeviceItem extends StatelessWidget {
-  const DeviceItem({
+class RoomItem extends StatelessWidget {
+  const RoomItem({
     Key? key,
-    required this.device,
+    required this.room,
   }) : super(key: key);
-  final Device device;
+  final Room room;
 
   @override
   Widget build(BuildContext context) {
@@ -28,16 +28,16 @@ class DeviceItem extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Image.asset(device.image, height: 50, width: 50),
+                Image.asset(room.image, height: 50, width: 50),
                 PowerButton(
-                  isActive: device.isActive,
+                  isActive: room.isActive,
                 ),
               ],
             ),
             Padding(
                 padding: const EdgeInsets.only(left: 10, top: 10, bottom: 5),
                 child: AutoSizeText(
-                  device.name,
+                  room.name,
                   overflow: TextOverflow.ellipsis,
                   softWrap: true,
                   style: TextStyles.karla.copyWith(color: Colors.black),
@@ -45,7 +45,7 @@ class DeviceItem extends StatelessWidget {
             Padding(
                 padding: const EdgeInsets.only(left: 10),
                 child: AutoSizeText(
-                  device.subtitle,
+                  room.subtitle,
                   style: TextStyles.karla.copyWith(color: Colors.black),
                 ))
           ],
