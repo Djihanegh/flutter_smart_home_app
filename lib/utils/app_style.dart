@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:smart_home_app/utils/app_colors.dart';
 
 class TextStyles {
   static const brandleyHand = TextStyle(fontFamily: 'BRADHI', fontSize: 20);
@@ -22,6 +23,6 @@ class TextStyles {
 }
 
 const LinearGradient linearGradient = LinearGradient(
-    begin: Alignment.centerRight,
-    end: Alignment.centerLeft,
-    colors: [Color(0xFF212C42), Color(0xFF212C42)]);
+    begin: Alignment.centerLeft,
+    end: Alignment.centerRight,
+    colors: [primaryColor, secondaryColor]);

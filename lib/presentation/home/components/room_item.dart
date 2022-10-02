@@ -39,24 +39,26 @@ class RoomItem extends StatelessWidget {
               ],
             ),
             Padding(
-                padding: const EdgeInsets.only(left: 10, top: 10, bottom: 5),
+                padding: const EdgeInsets.only(left: 10, top: 15, bottom: 5),
                 child: Container(
-                    padding: paddingAll(2),
+                    padding: const EdgeInsets.only(
+                        left: 10, right: 10, top: 2, bottom: 2),
                     decoration: BoxDecoration(
                         color: primaryColor.withOpacity(0.5),
+                        gradient: linearGradient,
                         borderRadius: BorderRadius.circular(30)),
                     child: AutoSizeText(
                       room.name,
-                      overflow: TextOverflow.ellipsis,
-                      softWrap: true,
                       style: TextStyles.karla.copyWith(
-                          color: Colors.black, fontWeight: FontWeight.bold),
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 15),
                     ))),
             Padding(
                 padding: const EdgeInsets.only(left: 10),
                 child: AutoSizeText(
                   room.subtitle,
-                  style: TextStyles.karla.copyWith(color: Colors.black),
+                  style: TextStyles.nunitoSans400.copyWith(color: Colors.black),
                 ))
           ],
         ));

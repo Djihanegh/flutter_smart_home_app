@@ -1,4 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:smart_home_app/domain/entities/device.dart';
 
 part 'room.freezed.dart';
 
@@ -12,7 +13,7 @@ class Room with _$Room {
       required String image,
       required String subtitle,
       required bool isActive,
-      List<Room>? Rooms}) = _Room;
+      List<Device>? devices}) = _Room;
 
   static const fromJsonFactory = _$RoomFromJson;
 

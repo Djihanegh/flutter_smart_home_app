@@ -25,7 +25,7 @@ mixin _$Room {
   String get image => throw _privateConstructorUsedError;
   String get subtitle => throw _privateConstructorUsedError;
   bool get isActive => throw _privateConstructorUsedError;
-  List<Room>? get Rooms => throw _privateConstructorUsedError;
+  List<Device>? get devices => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -42,7 +42,7 @@ abstract class $RoomCopyWith<$Res> {
       String image,
       String subtitle,
       bool isActive,
-      List<Room>? Rooms});
+      List<Device>? devices});
 }
 
 /// @nodoc
@@ -60,7 +60,7 @@ class _$RoomCopyWithImpl<$Res> implements $RoomCopyWith<$Res> {
     Object? image = freezed,
     Object? subtitle = freezed,
     Object? isActive = freezed,
-    Object? Rooms = freezed,
+    Object? devices = freezed,
   }) {
     return _then(_value.copyWith(
       roomId: roomId == freezed
@@ -83,10 +83,10 @@ class _$RoomCopyWithImpl<$Res> implements $RoomCopyWith<$Res> {
           ? _value.isActive
           : isActive // ignore: cast_nullable_to_non_nullable
               as bool,
-      Rooms: Rooms == freezed
-          ? _value.Rooms
-          : Rooms // ignore: cast_nullable_to_non_nullable
-              as List<Room>?,
+      devices: devices == freezed
+          ? _value.devices
+          : devices // ignore: cast_nullable_to_non_nullable
+              as List<Device>?,
     ));
   }
 }
@@ -102,7 +102,7 @@ abstract class _$$_RoomCopyWith<$Res> implements $RoomCopyWith<$Res> {
       String image,
       String subtitle,
       bool isActive,
-      List<Room>? Rooms});
+      List<Device>? devices});
 }
 
 /// @nodoc
@@ -121,7 +121,7 @@ class __$$_RoomCopyWithImpl<$Res> extends _$RoomCopyWithImpl<$Res>
     Object? image = freezed,
     Object? subtitle = freezed,
     Object? isActive = freezed,
-    Object? Rooms = freezed,
+    Object? devices = freezed,
   }) {
     return _then(_$_Room(
       roomId: roomId == freezed
@@ -144,10 +144,10 @@ class __$$_RoomCopyWithImpl<$Res> extends _$RoomCopyWithImpl<$Res>
           ? _value.isActive
           : isActive // ignore: cast_nullable_to_non_nullable
               as bool,
-      Rooms: Rooms == freezed
-          ? _value._Rooms
-          : Rooms // ignore: cast_nullable_to_non_nullable
-              as List<Room>?,
+      devices: devices == freezed
+          ? _value._devices
+          : devices // ignore: cast_nullable_to_non_nullable
+              as List<Device>?,
     ));
   }
 }
@@ -161,8 +161,8 @@ class _$_Room implements _Room {
       required this.image,
       required this.subtitle,
       required this.isActive,
-      final List<Room>? Rooms})
-      : _Rooms = Rooms;
+      final List<Device>? devices})
+      : _devices = devices;
 
   factory _$_Room.fromJson(Map<String, dynamic> json) => _$$_RoomFromJson(json);
 
@@ -176,10 +176,10 @@ class _$_Room implements _Room {
   final String subtitle;
   @override
   final bool isActive;
-  final List<Room>? _Rooms;
+  final List<Device>? _devices;
   @override
-  List<Room>? get Rooms {
-    final value = _Rooms;
+  List<Device>? get devices {
+    final value = _devices;
     if (value == null) return null;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(value);
@@ -187,7 +187,7 @@ class _$_Room implements _Room {
 
   @override
   String toString() {
-    return 'Room(roomId: $roomId, name: $name, image: $image, subtitle: $subtitle, isActive: $isActive, Rooms: $Rooms)';
+    return 'Room(roomId: $roomId, name: $name, image: $image, subtitle: $subtitle, isActive: $isActive, devices: $devices)';
   }
 
   @override
@@ -200,7 +200,7 @@ class _$_Room implements _Room {
             const DeepCollectionEquality().equals(other.image, image) &&
             const DeepCollectionEquality().equals(other.subtitle, subtitle) &&
             const DeepCollectionEquality().equals(other.isActive, isActive) &&
-            const DeepCollectionEquality().equals(other._Rooms, _Rooms));
+            const DeepCollectionEquality().equals(other._devices, _devices));
   }
 
   @JsonKey(ignore: true)
@@ -212,7 +212,7 @@ class _$_Room implements _Room {
       const DeepCollectionEquality().hash(image),
       const DeepCollectionEquality().hash(subtitle),
       const DeepCollectionEquality().hash(isActive),
-      const DeepCollectionEquality().hash(_Rooms));
+      const DeepCollectionEquality().hash(_devices));
 
   @JsonKey(ignore: true)
   @override
@@ -234,7 +234,7 @@ abstract class _Room implements Room {
       required final String image,
       required final String subtitle,
       required final bool isActive,
-      final List<Room>? Rooms}) = _$_Room;
+      final List<Device>? devices}) = _$_Room;
 
   factory _Room.fromJson(Map<String, dynamic> json) = _$_Room.fromJson;
 
@@ -249,7 +249,7 @@ abstract class _Room implements Room {
   @override
   bool get isActive;
   @override
-  List<Room>? get Rooms;
+  List<Device>? get devices;
   @override
   @JsonKey(ignore: true)
   _$$_RoomCopyWith<_$_Room> get copyWith => throw _privateConstructorUsedError;
