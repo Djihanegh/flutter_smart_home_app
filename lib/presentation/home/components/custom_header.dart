@@ -16,7 +16,7 @@ class CustomHeader extends StatelessWidget {
       children: [
         AutoSizeText(
           welcomeText,
-          style: TextStyles.karla
+          style: TextStyles.nunitoSans
               .copyWith(color: Colors.black.withOpacity(0.8), fontSize: 25),
         ),
         const CustomAddButton()

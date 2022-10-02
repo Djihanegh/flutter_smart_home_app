@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:smart_home_app/presentation/home/components/custom_header.dart';
 import 'package:smart_home_app/utils/app_colors.dart';
 
+import '../../../utils/app_style.dart';
 import '../../../utils/constants.dart';
 import '../../../utils/size_config.dart';
 import 'custom_grid_view.dart';
@@ -49,6 +50,8 @@ class _BodyState extends State<Body> with SingleTickerProviderStateMixin {
                           text: 'Rooms',
                         )
                       ],
+                      labelStyle:
+                          TextStyles.nunitoSans400.copyWith(fontSize: 15),
                       controller: tabController!,
                       indicatorSize: TabBarIndicatorSize.label,
                       indicatorColor: primaryColor,

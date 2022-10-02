@@ -15,7 +15,7 @@ class TemperatureHumidityWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return AutoSizeText(
       '$temperature $temp" | $humidity $humd%',
-      style: TextStyles.karla
+      style: TextStyles.nunitoSans400
           .copyWith(color: Colors.black.withOpacity(0.4), fontSize: 12),
     );
   }
