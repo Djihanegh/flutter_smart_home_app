@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'config/routes.dart';
-import 'presentation/home/home_screen.dart';
+import 'presentation/home/home.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       routes: routes,
       title: '',
       theme: ThemeData(),
-      home: const HomeScreen(),
+      home: const Home(),
     );
   }
 }

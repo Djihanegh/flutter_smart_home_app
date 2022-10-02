@@ -14,8 +14,6 @@ class _BodyState extends State<Body> {
   Widget build(BuildContext context) {
     SizeConfig().init(context);
 
-    return const Scaffold(
-      body: Body(),
-    );
+    return SafeArea(child: Container());
   }
 }
