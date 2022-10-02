@@ -1,9 +1,8 @@
-import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
-import 'package:smart_home_app/utils/app_style.dart';
+import 'package:smart_home_app/presentation/home/components/custom_header.dart';
 
 import '../../../utils/size_config.dart';
-import 'add_button.dart';
+import 'temperature_humidity_widget.dart';
 
 class Body extends StatefulWidget {
   const Body({Key? key}) : super(key: key);
@@ -21,7 +20,10 @@ class _BodyState extends State<Body> {
         child: Column(
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.start,
-      children: [CustomHeader()],
+      children: const [
+        CustomHeader(),
+        TemperatureHumidityWidget(temp: 23, humd: 43)
+      ],
     ));
   }
 }
