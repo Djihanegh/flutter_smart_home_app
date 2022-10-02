@@ -52,4 +52,10 @@ List<Device> devicesList = [
       image: television,
       subtitle: "Turning on",
       isActive: true),
+  Device(
+      id: uuid.v4(),
+      name: "Add a new device",
+      image: "",
+      subtitle: "",
+      isActive: false),
 ];

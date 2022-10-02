@@ -25,21 +25,14 @@ class RoomItem extends StatelessWidget {
             border:
                 Border.all(width: 1.5, color: Colors.black.withOpacity(0.4))),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.end,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Image.asset(room.image, height: 50, width: 50),
-                PowerButton(
-                  isActive: room.isActive,
-                ),
-              ],
-            ),
             Padding(
-                padding: const EdgeInsets.only(left: 10, top: 15, bottom: 5),
+                padding: const EdgeInsets.only(
+                  left: 10,
+                  bottom: 5,
+                ),
                 child: Container(
                     padding: const EdgeInsets.only(
                         left: 10, right: 10, top: 2, bottom: 2),
@@ -55,7 +48,7 @@ class RoomItem extends StatelessWidget {
                           fontSize: 15),
                     ))),
             Padding(
-                padding: const EdgeInsets.only(left: 10),
+                padding: const EdgeInsets.only(left: 10, bottom: 10),
                 child: Container(
                     padding: const EdgeInsets.only(
                         left: 10, right: 10, top: 2, bottom: 2),

@@ -136,4 +136,5 @@ List<Room> roomsList = [
             subtitle: "Turning on",
             isActive: true),
       ]),
+  const Room(name: "Add a new room", image: "", subtitle: "", isActive: false)
 ];
