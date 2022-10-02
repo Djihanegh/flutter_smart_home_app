@@ -1,5 +1,6 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
+import 'package:smart_home_app/utils/app_colors.dart';
 
 import '../../utils/app_style.dart';
 
@@ -30,7 +31,13 @@ class BottomNavBarItem extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                SizedBox(height: 20, width: 30, child: Icon(icon)),
+                SizedBox(
+                    height: 20,
+                    width: 30,
+                    child: Icon(icon,
+                        color: index == navBarIndex
+                            ? primaryColor
+                            : Colors.black.withOpacity(0.4))),
                 const SizedBox(
                   height: 4,
                 ),
@@ -38,8 +45,8 @@ class BottomNavBarItem extends StatelessWidget {
                     style: TextStyles.karla.copyWith(
                         fontSize: 12,
                         color: index == navBarIndex
-                            ? Colors.white
-                            : Colors.white.withOpacity(0.4)))
+                            ? primaryColor
+                            : Colors.black.withOpacity(0.4)))
               ],
             )));
   }
