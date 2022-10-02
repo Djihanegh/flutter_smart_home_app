@@ -12,7 +12,10 @@ class CustomGridView extends StatelessWidget {
     return GridView.builder(
       shrinkWrap: true,
       primary: false,
-      padding: padding20,
+      padding: const EdgeInsets.only(
+        left: 20,
+        right: 20,
+      ),
       itemCount: 10,
       itemBuilder: (BuildContext ctx, index) {
         return const Deviceitem(

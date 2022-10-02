@@ -1,23 +1,15 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:smart_home_app/utils/app_style.dart';
-import 'package:smart_home_app/utils/constants.dart';
-import 'package:smart_home_app/utils/size_config.dart';
-
+import '../../../domain/entities/device.dart';
 import 'power_button.dart';
 
 class Deviceitem extends StatelessWidget {
-  const Deviceitem(
-      {Key? key,
-      required this.title,
-      required this.subtitle,
-      required this.image,
-      required this.isOn})
-      : super(key: key);
-  final String title;
-  final String subtitle;
-  final String image;
-  final bool isOn;
+  const Deviceitem({
+    Key? key,
+    required this.device,
+  }) : super(key: key);
+  final Device device;
 
   @override
   Widget build(BuildContext context) {
@@ -36,7 +28,7 @@ class Deviceitem extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Image.asset(image, height: 50, width: 50),
+                Image.asset(device.image, height: 50, width: 50),
                 const PowerButton(
                   isActive: true,
                 ),
@@ -45,13 +37,13 @@ class Deviceitem extends StatelessWidget {
             Padding(
                 padding: const EdgeInsets.only(left: 10, top: 10, bottom: 5),
                 child: AutoSizeText(
-                  title,
+                  device.name,
                   style: TextStyles.karla.copyWith(color: Colors.black),
                 )),
             Padding(
                 padding: const EdgeInsets.only(left: 10),
                 child: AutoSizeText(
-                  subtitle,
+                  device.subtitle,
                   style: TextStyles.karla.copyWith(color: Colors.black),
                 ))
           ],
