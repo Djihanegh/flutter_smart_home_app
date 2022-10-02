@@ -29,8 +29,8 @@ class Deviceitem extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Image.asset(device.image, height: 50, width: 50),
-                const PowerButton(
-                  isActive: true,
+                PowerButton(
+                  isActive: device.isActive,
                 ),
               ],
             ),
@@ -38,6 +38,8 @@ class Deviceitem extends StatelessWidget {
                 padding: const EdgeInsets.only(left: 10, top: 10, bottom: 5),
                 child: AutoSizeText(
                   device.name,
+                  overflow: TextOverflow.ellipsis,
+                  softWrap: true,
                   style: TextStyles.karla.copyWith(color: Colors.black),
                 )),
             Padding(
