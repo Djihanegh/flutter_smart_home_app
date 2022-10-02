@@ -56,10 +56,19 @@ class RoomItem extends StatelessWidget {
                     ))),
             Padding(
                 padding: const EdgeInsets.only(left: 10),
-                child: AutoSizeText(
-                  room.subtitle,
-                  style: TextStyles.nunitoSans400.copyWith(color: Colors.black),
-                ))
+                child: Container(
+                    padding: const EdgeInsets.only(
+                        left: 10, right: 10, top: 2, bottom: 2),
+                    decoration: BoxDecoration(
+                        color: Colors.white.withOpacity(0.8),
+                        borderRadius: BorderRadius.circular(30)),
+                    child: AutoSizeText(
+                      "${room.devices?.length ?? 0} devices",
+                      style: TextStyles.karla.copyWith(
+                          color: Colors.black,
+                          fontSize: 13,
+                          fontWeight: FontWeight.w600),
+                    )))
           ],
         ));
   }
