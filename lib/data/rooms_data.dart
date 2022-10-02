@@ -7,25 +7,25 @@ List<Room> roomsList = [
   Room(
       roomId: uuid.v4(),
       name: "Kitchen",
-      image: filtration,
+      image: kitchen,
       subtitle: "Turning on",
       isActive: false),
   Room(
       roomId: uuid.v4(),
       name: "Bedroom",
-      image: airConditioner,
+      image: bedroom,
       subtitle: "Turning on",
       isActive: true),
   Room(
       roomId: uuid.v4(),
       name: "Living room",
-      image: camera,
+      image: livingRoom,
       subtitle: "Turning on",
       isActive: true),
   Room(
       roomId: uuid.v4(),
       name: "Hall",
-      image: lamp,
+      image: hall,
       subtitle: "Turning on",
       isActive: true),
 ];

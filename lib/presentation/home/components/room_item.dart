@@ -16,6 +16,8 @@ class RoomItem extends StatelessWidget {
     return Container(
         padding: const EdgeInsets.all(10),
         decoration: BoxDecoration(
+            image: DecorationImage(
+                image: AssetImage(room.image), fit: BoxFit.cover),
             color: Colors.grey.withOpacity(0.1),
             borderRadius: BorderRadius.circular(15),
             border:

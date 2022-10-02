@@ -62,8 +62,10 @@ class _BodyState extends State<Body> with SingleTickerProviderStateMixin {
                   child: TabBarView(
                     controller: tabController,
                     children: const [
-                      CustomGridView(),
-                      CustomGridView(),
+                      CustomGridView(
+                        key: Key("device"),
+                      ),
+                      CustomGridView(key: Key("room")),
                     ],
                   ),
                 ),
