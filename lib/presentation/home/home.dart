@@ -1,6 +1,6 @@
-import 'dart:convert';
 import 'package:flutter/material.dart';
 import '../../utils/size_config.dart';
+import '../schedule/schedule_screen.dart';
 import '../widgets/bottom_nav_bar.dart';
 import 'home_screen.dart';
 
@@ -17,7 +17,7 @@ class HomeState extends State<Home> {
 
   List<Widget> pages = [
     const HomeScreen(),
-    const HomeScreen(),
+    const ScheduleScreen(),
     const HomeScreen(),
   ];
 
@@ -32,6 +32,7 @@ class HomeState extends State<Home> {
 
     return Scaffold(
         bottomNavigationBar: Container(
+            decoration: BoxDecoration(borderRadius: BorderRadius.circular(30)),
             height: 60,
             child: Row(
               children: [

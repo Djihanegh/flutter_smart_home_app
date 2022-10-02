@@ -44,6 +44,8 @@ dependencies:
   bloc: ^8.1.0
   freezed: ^2.1.0+1
   uuid: ^3.0.6
+  flutter_switch: ^0.3.2
+  intl: ^0.17.0
 
 dev_dependencies:
   flutter_test:

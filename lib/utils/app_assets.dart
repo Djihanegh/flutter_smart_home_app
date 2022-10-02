@@ -17,3 +17,10 @@ const bathroom = "assets/images/bathroom.jpg";
 const bedroom = "assets/images/bedroom.jpg";
 const hall = "assets/images/hall.jpg";
 const livingRoom = "assets/images/living-room.jpg";
+
+/// Schedules images
+
+const afternoon = "assets/images/afternoon.jpg";
+const evening = "assets/images/evening.jpg";
+const morning = "assets/images/morning.jpg";
+const night = "assets/images/night.jpg";
