@@ -4,6 +4,7 @@ import 'package:smart_home_app/utils/app_colors.dart';
 
 import '../../../utils/constants.dart';
 import '../../../utils/size_config.dart';
+import 'custom_grid_view.dart';
 import 'temperature_humidity_widget.dart';
 
 class Body extends StatefulWidget {
@@ -56,13 +57,11 @@ class _BodyState extends State<Body> with SingleTickerProviderStateMixin {
                     )),
                 Expanded(
                   child: TabBarView(
-                    children: const [
-                         DevicesGridView()
-                      
-                      
-                       RoomsGridView(),
-                    ],
                     controller: tabController,
+                    children: const [
+                      CustomGridView(),
+                      CustomGridView(),
+                    ],
                   ),
                 ),
               ],
