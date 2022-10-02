@@ -30,7 +30,7 @@ class _BodyState extends State<Body> with SingleTickerProviderStateMixin {
 
     return SafeArea(
         child: Padding(
-            padding: padding10,
+            padding: paddingAll(10),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -38,7 +38,7 @@ class _BodyState extends State<Body> with SingleTickerProviderStateMixin {
                 const CustomHeader(),
                 const TemperatureHumidityWidget(temp: 23, humd: 43),
                 Padding(
-                    padding: padding30,
+                    padding: paddingAll(30),
                     child: TabBar(
                       unselectedLabelColor: Colors.black.withOpacity(0.4),
                       labelColor: primaryColor,
@@ -55,7 +55,7 @@ class _BodyState extends State<Body> with SingleTickerProviderStateMixin {
                       controller: tabController!,
                       indicatorSize: TabBarIndicatorSize.label,
                       indicatorColor: primaryColor,
-                      indicatorPadding: padding10,
+                      indicatorPadding: paddingAll(10),
                       labelPadding: EdgeInsets.zero,
                     )),
                 Expanded(

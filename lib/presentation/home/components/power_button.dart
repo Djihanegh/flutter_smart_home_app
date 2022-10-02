@@ -11,11 +11,11 @@ class PowerButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-        padding: padding10,
+        padding: paddingAll(10),
         child: Container(
             height: 40,
             width: 40,
-            padding: padding2,
+            padding: paddingAll(2),
             decoration: BoxDecoration(
                 color: isActive ? primaryColor : Colors.white,
                 borderRadius: BorderRadius.circular(30),

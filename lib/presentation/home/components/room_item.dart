@@ -1,6 +1,8 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
+import 'package:smart_home_app/utils/app_colors.dart';
 import 'package:smart_home_app/utils/app_style.dart';
+import 'package:smart_home_app/utils/constants.dart';
 import '../../../domain/entities/room.dart';
 import 'power_button.dart';
 
@@ -14,7 +16,7 @@ class RoomItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        padding: const EdgeInsets.all(10),
+        padding: const EdgeInsets.all(0),
         decoration: BoxDecoration(
             image: DecorationImage(
                 image: AssetImage(room.image), fit: BoxFit.cover),
@@ -38,12 +40,18 @@ class RoomItem extends StatelessWidget {
             ),
             Padding(
                 padding: const EdgeInsets.only(left: 10, top: 10, bottom: 5),
-                child: AutoSizeText(
-                  room.name,
-                  overflow: TextOverflow.ellipsis,
-                  softWrap: true,
-                  style: TextStyles.karla.copyWith(color: Colors.black),
-                )),
+                child: Container(
+                    padding: paddingAll(2),
+                    decoration: BoxDecoration(
+                        color: primaryColor.withOpacity(0.5),
+                        borderRadius: BorderRadius.circular(30)),
+                    child: AutoSizeText(
+                      room.name,
+                      overflow: TextOverflow.ellipsis,
+                      softWrap: true,
+                      style: TextStyles.karla.copyWith(
+                          color: Colors.black, fontWeight: FontWeight.bold),
+                    ))),
             Padding(
                 padding: const EdgeInsets.only(left: 10),
                 child: AutoSizeText(
