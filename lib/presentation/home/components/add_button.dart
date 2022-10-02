@@ -7,8 +7,8 @@ class CustomAddButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        height: 50,
-        width: 50,
+        height: 30,
+        width: 30,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(30),
           gradient: const LinearGradient(
@@ -43,12 +43,14 @@ class CustomAddButton extends StatelessWidget {
             ),
           ],
         ),
-        child: IconButton(
+        child: Center(
+            child: IconButton(
           icon: const Icon(
             Icons.add,
             color: Colors.white,
+            size: 12,
           ),
           onPressed: () {},
-        ));
+        )));
   }
 }

@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 
 import '../../../utils/app_style.dart';
 import '../../../utils/app_texts.dart';
-import 'add_button.dart';
 
 class CustomHeader extends StatelessWidget {
   const CustomHeader({Key? key}) : super(key: key);
@@ -19,7 +18,7 @@ class CustomHeader extends StatelessWidget {
           style: TextStyles.nunitoSans
               .copyWith(color: Colors.black.withOpacity(0.8), fontSize: 25),
         ),
-        const CustomAddButton()
+        //   const CustomAddButton()
       ],
     );
   }

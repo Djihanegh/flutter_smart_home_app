@@ -1,7 +1,8 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:smart_home_app/presentation/home/components/custom_grid_view.dart';
-import 'package:smart_home_app/utils/app_colors.dart';
+
+import 'add_button.dart';
 
 class EmptyItem extends StatelessWidget {
   const EmptyItem({
@@ -23,10 +24,10 @@ class EmptyItem extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             AutoSizeText("Add a new $name"),
-            const Icon(
-              Icons.add,
-              color: primaryColor,
+            const SizedBox(
+              height: 10,
             ),
+            const CustomAddButton()
           ],
         ));
   }
