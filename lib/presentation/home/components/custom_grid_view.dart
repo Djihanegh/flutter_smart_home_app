@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
+import 'package:smart_home_app/presentation/home/components/device_item.dart';
+import 'package:smart_home_app/utils/app_assets.dart';
 
-import '../../../utils/size_config.dart';
+import '../../../utils/constants.dart';
 
 class CustomGridView extends StatelessWidget {
   const CustomGridView({Key? key}) : super(key: key);
@@ -10,16 +12,14 @@ class CustomGridView extends StatelessWidget {
     return GridView.builder(
       shrinkWrap: true,
       primary: false,
-      padding: EdgeInsets.only(
-          left: SizeConfig.screenWidth! / 4,
-          right: SizeConfig.screenWidth! / 4,
-          top: SizeConfig.screenHeight! * 0.15),
+      padding: padding20,
       itemCount: 10,
       itemBuilder: (BuildContext ctx, index) {
-        return Container();
+        return const Deviceitem(
+            title: "Lamp", subtitle: 'Turning on', image: lamp, isOn: true);
       },
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 2, crossAxisSpacing: 0, mainAxisSpacing: 0),
+          crossAxisCount: 2, crossAxisSpacing: 20, mainAxisSpacing: 20),
     );
   }
 }

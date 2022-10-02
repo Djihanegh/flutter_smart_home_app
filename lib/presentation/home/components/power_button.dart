@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:smart_home_app/utils/app_assets.dart';
+import 'package:smart_home_app/utils/constants.dart';
 
 import '../../../utils/app_colors.dart';
 
@@ -9,16 +10,22 @@ class PowerButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-        height: 20,
-        width: 20,
-        decoration: BoxDecoration(
-            color: isActive ? primaryColor : Colors.white,
-            borderRadius: BorderRadius.circular(30),
-            border: Border.all(width: 1, color: Colors.white)),
-        child: Image.asset(
-          powerBtn,
-          color: isActive ? Colors.white : primaryColor,
-        ));
+    return Padding(
+        padding: padding10,
+        child: Container(
+            height: 40,
+            width: 40,
+            padding: padding2,
+            decoration: BoxDecoration(
+                color: isActive ? primaryColor : Colors.white,
+                borderRadius: BorderRadius.circular(30),
+                border: Border.all(width: 1.5, color: Colors.white)),
+            child: Center(
+                child: Image.asset(
+              powerBtn,
+              height: 20,
+              width: 20,
+              color: isActive ? Colors.white : primaryColor,
+            ))));
   }
 }
