@@ -26,8 +26,10 @@ class _DeviceItemState extends State<DeviceItem> {
               context: context,
               elevation: 10,
               backgroundColor: Colors.white,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(10.0),
+              shape: const RoundedRectangleBorder(
+                borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(15),
+                    topRight: Radius.circular(15)),
               ),
               builder: (BuildContext context) {
                 return DeviceDetailsWidget(
