@@ -10,14 +10,14 @@ import '../../../utils/size_config.dart';
 
 double _thumbValue = 0;
 
-class LampDetailsWidget extends StatefulWidget {
-  const LampDetailsWidget({Key? key}) : super(key: key);
+class AirConditionerWidget extends StatefulWidget {
+  const AirConditionerWidget({Key? key}) : super(key: key);
 
   @override
-  State<LampDetailsWidget> createState() => _LampDetailsWidgetState();
+  State<AirConditionerWidget> createState() => _AirConditionerWidgetState();
 }
 
-class _LampDetailsWidgetState extends State<LampDetailsWidget> {
+class _AirConditionerWidgetState extends State<AirConditionerWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(

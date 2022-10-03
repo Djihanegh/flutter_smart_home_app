@@ -13,10 +13,10 @@ class DeviceDetailsWidget extends StatelessWidget {
     Widget child = const EmptyWidget();
     switch (type) {
       case "Lamp":
-        child = const LampDetailsWidget();
+        child = Container();
         break;
       case "Air conditioner":
-        child = Container();
+        child = const AirConditionerWidget();
         break;
     }
 
