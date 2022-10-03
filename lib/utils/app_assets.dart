@@ -24,3 +24,8 @@ const afternoon = "assets/images/afternoon.jpg";
 const evening = "assets/images/evening.jpg";
 const morning = "assets/images/morning.jpg";
 const night = "assets/images/night.jpg";
+
+/// Others
+
+const snow = "assets/icons/snow.png";
+const temperature = "assets/icons/temperature.png";
