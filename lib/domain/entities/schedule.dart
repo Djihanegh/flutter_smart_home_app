@@ -5,9 +5,9 @@ part 'schedule.freezed.dart';
 
 part 'schedule.g.dart';
 
-@freezed
+@unfreezed
 class Schedule with _$Schedule {
-  const factory Schedule(
+  factory Schedule(
       {String? scheduleId,
       required DateTime startTime,
       required String image,

@@ -21,11 +21,17 @@ Room _$RoomFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$Room {
   String? get roomId => throw _privateConstructorUsedError;
+  set roomId(String? value) => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
+  set name(String value) => throw _privateConstructorUsedError;
   String get image => throw _privateConstructorUsedError;
+  set image(String value) => throw _privateConstructorUsedError;
   String get subtitle => throw _privateConstructorUsedError;
+  set subtitle(String value) => throw _privateConstructorUsedError;
   bool get isActive => throw _privateConstructorUsedError;
+  set isActive(bool value) => throw _privateConstructorUsedError;
   List<Device>? get devices => throw _privateConstructorUsedError;
+  set devices(List<Device>? value) => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -145,7 +151,7 @@ class __$$_RoomCopyWithImpl<$Res> extends _$RoomCopyWithImpl<$Res>
           : isActive // ignore: cast_nullable_to_non_nullable
               as bool,
       devices: devices == freezed
-          ? _value._devices
+          ? _value.devices
           : devices // ignore: cast_nullable_to_non_nullable
               as List<Device>?,
     ));
@@ -155,64 +161,33 @@ class __$$_RoomCopyWithImpl<$Res> extends _$RoomCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Room implements _Room {
-  const _$_Room(
+  _$_Room(
       {this.roomId,
       required this.name,
       required this.image,
       required this.subtitle,
       required this.isActive,
-      final List<Device>? devices})
-      : _devices = devices;
+      this.devices});
 
   factory _$_Room.fromJson(Map<String, dynamic> json) => _$$_RoomFromJson(json);
 
   @override
-  final String? roomId;
+  String? roomId;
   @override
-  final String name;
+  String name;
   @override
-  final String image;
+  String image;
   @override
-  final String subtitle;
+  String subtitle;
   @override
-  final bool isActive;
-  final List<Device>? _devices;
+  bool isActive;
   @override
-  List<Device>? get devices {
-    final value = _devices;
-    if (value == null) return null;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
+  List<Device>? devices;
 
   @override
   String toString() {
     return 'Room(roomId: $roomId, name: $name, image: $image, subtitle: $subtitle, isActive: $isActive, devices: $devices)';
   }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$_Room &&
-            const DeepCollectionEquality().equals(other.roomId, roomId) &&
-            const DeepCollectionEquality().equals(other.name, name) &&
-            const DeepCollectionEquality().equals(other.image, image) &&
-            const DeepCollectionEquality().equals(other.subtitle, subtitle) &&
-            const DeepCollectionEquality().equals(other.isActive, isActive) &&
-            const DeepCollectionEquality().equals(other._devices, _devices));
-  }
-
-  @JsonKey(ignore: true)
-  @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(roomId),
-      const DeepCollectionEquality().hash(name),
-      const DeepCollectionEquality().hash(image),
-      const DeepCollectionEquality().hash(subtitle),
-      const DeepCollectionEquality().hash(isActive),
-      const DeepCollectionEquality().hash(_devices));
 
   @JsonKey(ignore: true)
   @override
@@ -228,28 +203,34 @@ class _$_Room implements _Room {
 }
 
 abstract class _Room implements Room {
-  const factory _Room(
-      {final String? roomId,
-      required final String name,
-      required final String image,
-      required final String subtitle,
-      required final bool isActive,
-      final List<Device>? devices}) = _$_Room;
+  factory _Room(
+      {String? roomId,
+      required String name,
+      required String image,
+      required String subtitle,
+      required bool isActive,
+      List<Device>? devices}) = _$_Room;
 
   factory _Room.fromJson(Map<String, dynamic> json) = _$_Room.fromJson;
 
   @override
   String? get roomId;
+  set roomId(String? value);
   @override
   String get name;
+  set name(String value);
   @override
   String get image;
+  set image(String value);
   @override
   String get subtitle;
+  set subtitle(String value);
   @override
   bool get isActive;
+  set isActive(bool value);
   @override
   List<Device>? get devices;
+  set devices(List<Device>? value);
   @override
   @JsonKey(ignore: true)
   _$$_RoomCopyWith<_$_Room> get copyWith => throw _privateConstructorUsedError;

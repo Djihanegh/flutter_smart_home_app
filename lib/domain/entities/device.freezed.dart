@@ -21,11 +21,17 @@ Device _$DeviceFromJson(Map<String, dynamic> json) {
 /// @nodoc
 mixin _$Device {
   String get id => throw _privateConstructorUsedError;
+  set id(String value) => throw _privateConstructorUsedError;
   String? get roomId => throw _privateConstructorUsedError;
+  set roomId(String? value) => throw _privateConstructorUsedError;
   String get name => throw _privateConstructorUsedError;
+  set name(String value) => throw _privateConstructorUsedError;
   String get image => throw _privateConstructorUsedError;
+  set image(String value) => throw _privateConstructorUsedError;
   String get subtitle => throw _privateConstructorUsedError;
+  set subtitle(String value) => throw _privateConstructorUsedError;
   bool get isActive => throw _privateConstructorUsedError;
+  set isActive(bool value) => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -155,7 +161,7 @@ class __$$_DeviceCopyWithImpl<$Res> extends _$DeviceCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Device implements _Device {
-  const _$_Device(
+  _$_Device(
       {required this.id,
       this.roomId,
       required this.name,
@@ -167,46 +173,22 @@ class _$_Device implements _Device {
       _$$_DeviceFromJson(json);
 
   @override
-  final String id;
+  String id;
   @override
-  final String? roomId;
+  String? roomId;
   @override
-  final String name;
+  String name;
   @override
-  final String image;
+  String image;
   @override
-  final String subtitle;
+  String subtitle;
   @override
-  final bool isActive;
+  bool isActive;
 
   @override
   String toString() {
     return 'Device(id: $id, roomId: $roomId, name: $name, image: $image, subtitle: $subtitle, isActive: $isActive)';
   }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$_Device &&
-            const DeepCollectionEquality().equals(other.id, id) &&
-            const DeepCollectionEquality().equals(other.roomId, roomId) &&
-            const DeepCollectionEquality().equals(other.name, name) &&
-            const DeepCollectionEquality().equals(other.image, image) &&
-            const DeepCollectionEquality().equals(other.subtitle, subtitle) &&
-            const DeepCollectionEquality().equals(other.isActive, isActive));
-  }
-
-  @JsonKey(ignore: true)
-  @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(id),
-      const DeepCollectionEquality().hash(roomId),
-      const DeepCollectionEquality().hash(name),
-      const DeepCollectionEquality().hash(image),
-      const DeepCollectionEquality().hash(subtitle),
-      const DeepCollectionEquality().hash(isActive));
 
   @JsonKey(ignore: true)
   @override
@@ -222,28 +204,34 @@ class _$_Device implements _Device {
 }
 
 abstract class _Device implements Device {
-  const factory _Device(
-      {required final String id,
-      final String? roomId,
-      required final String name,
-      required final String image,
-      required final String subtitle,
-      required final bool isActive}) = _$_Device;
+  factory _Device(
+      {required String id,
+      String? roomId,
+      required String name,
+      required String image,
+      required String subtitle,
+      required bool isActive}) = _$_Device;
 
   factory _Device.fromJson(Map<String, dynamic> json) = _$_Device.fromJson;
 
   @override
   String get id;
+  set id(String value);
   @override
   String? get roomId;
+  set roomId(String? value);
   @override
   String get name;
+  set name(String value);
   @override
   String get image;
+  set image(String value);
   @override
   String get subtitle;
+  set subtitle(String value);
   @override
   bool get isActive;
+  set isActive(bool value);
   @override
   @JsonKey(ignore: true)
   _$$_DeviceCopyWith<_$_Device> get copyWith =>

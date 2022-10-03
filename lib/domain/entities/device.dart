@@ -4,9 +4,9 @@ part 'device.freezed.dart';
 
 part 'device.g.dart';
 
-@freezed
+@unfreezed
 class Device with _$Device {
-  const factory Device({
+  factory Device({
     required String id,
     String? roomId,
     required String name,

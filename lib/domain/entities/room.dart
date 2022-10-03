@@ -5,9 +5,9 @@ part 'room.freezed.dart';
 
 part 'room.g.dart';
 
-@freezed
+@unfreezed
 class Room with _$Room {
-  const factory Room(
+  factory Room(
       {String? roomId,
       required String name,
       required String image,
