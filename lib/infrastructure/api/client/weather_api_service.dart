@@ -13,7 +13,7 @@ part 'weather_api_service.chopper.dart';
 abstract class WeatherApiService extends ChopperService {
   //************************************** GET REQUESTS *********************************************** */
   @Get(path: '/weather')
-  Future<Response<String>> getCurrentWeather(
+  Future<Response<Map<String, dynamic>>> getCurrentWeather(
     @Query('lat') double latitude,
     @Query('long') double longitude,
     @Query('appid') String appId,

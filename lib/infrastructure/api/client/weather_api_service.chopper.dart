@@ -17,7 +17,7 @@ class _$WeatherApiService extends WeatherApiService {
   final definitionType = WeatherApiService;
 
   @override
-  Future<Response<String>> getCurrentWeather(
+  Future<Response<Map<String, dynamic>>> getCurrentWeather(
     double latitude,
     double longitude,
     String appId,
@@ -34,6 +34,6 @@ class _$WeatherApiService extends WeatherApiService {
       client.baseUrl,
       parameters: $params,
     );
-    return client.send<String, String>($request);
+    return client.send<Map<String, dynamic>, Map<String, dynamic>>($request);
   }
 }
