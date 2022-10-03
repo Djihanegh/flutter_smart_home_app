@@ -46,6 +46,7 @@ dependencies:
   uuid: ^3.0.6
   flutter_switch: ^0.3.2
   intl: ^0.17.0
+  syncfusion_flutter_sliders: ^20.3.47
 
 dev_dependencies:
   flutter_test:
