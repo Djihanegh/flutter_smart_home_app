@@ -29,3 +29,4 @@ const night = "assets/images/night.jpg";
 
 const snow = "assets/icons/snow.png";
 const temperature = "assets/icons/temperature.png";
+const tumbIcon = "assets/icons/day.png";

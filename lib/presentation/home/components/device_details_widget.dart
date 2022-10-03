@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 import 'empty_device_details.dart';
-import 'lamp_details.dart';
+import 'air_conditioner_details.dart';
+import 'speaker_details.dart';
 
 class DeviceDetailsWidget extends StatelessWidget {
   const DeviceDetailsWidget({Key? key, required this.type}) : super(key: key);
@@ -12,8 +13,8 @@ class DeviceDetailsWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     Widget child = const EmptyWidget();
     switch (type) {
-      case "Lamp":
-        child = Container();
+      case "Speaker":
+        child = const SpeakerWidget();
         break;
       case "Air conditioner":
         child = const AirConditionerWidget();
