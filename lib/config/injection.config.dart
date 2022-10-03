@@ -8,6 +8,7 @@
 import 'package:get_it/get_it.dart' as _i1;
 import 'package:injectable/injectable.dart' as _i2;
 
+import '../application/weather/weather_bloc.dart' as _i5;
 import '../domain/weather/i_weather_facade.dart' as _i3;
 import '../infrastructure/weather/weather_facade.dart'
     as _i4; // ignore_for_file: unnecessary_lambdas
@@ -25,5 +26,6 @@ _i1.GetIt $initGetIt(
     environmentFilter,
   );
   gh.lazySingleton<_i3.IWeatherFacade>(() => _i4.WeatherFacade());
+  gh.factory<_i5.WeatherBloc>(() => _i5.WeatherBloc(get<_i3.IWeatherFacade>()));
   return get;
 }
