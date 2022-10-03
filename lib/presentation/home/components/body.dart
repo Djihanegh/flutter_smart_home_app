@@ -41,8 +41,6 @@ class _BodyState extends State<Body> with SingleTickerProviderStateMixin {
       position = await Geolocator.getCurrentPosition(
           desiredAccuracy: LocationAccuracy.high);
       setState(() {});
-
-      log(position.toString());
     } catch (e) {
       log(e.toString());
     }

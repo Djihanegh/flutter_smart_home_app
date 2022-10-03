@@ -28,8 +28,6 @@ class WeatherBloc extends Bloc<WeatherEvent, WeatherState> {
     failureOrSuccess = await weatherFacade.getCurrentWeather(
         event.appId, event.lat, event.long);
 
-    log("HELLOOOOOO");
-
     failureOrSuccess.fold(
         (l) => l.map(
             serverError: (e) => emit(state.copyWith(
