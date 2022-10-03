@@ -15,7 +15,7 @@ abstract class WeatherApiService extends ChopperService {
   @Get(path: '/weather')
   Future<Response<Map<String, dynamic>>> getCurrentWeather(
     @Query('lat') double latitude,
-    @Query('long') double longitude,
+    @Query('lon') double longitude,
     @Query('appid') String appId,
   );
 

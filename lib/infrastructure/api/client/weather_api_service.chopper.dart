@@ -25,7 +25,7 @@ class _$WeatherApiService extends WeatherApiService {
     final $url = 'https://api.openweathermap.org/data/2.5/weather';
     final $params = <String, dynamic>{
       'lat': latitude,
-      'long': longitude,
+      'lon': longitude,
       'appid': appId,
     };
     final $request = Request(

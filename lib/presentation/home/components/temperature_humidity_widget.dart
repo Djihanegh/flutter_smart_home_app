@@ -1,8 +1,12 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:smart_home_app/utils/app_style.dart';
 
+import '../../../application/weather/weather_bloc.dart';
 import '../../../utils/app_texts.dart';
+import '../../widgets/error_widget.dart';
+import '../../widgets/loading_widget.dart';
 
 class TemperatureHumidityWidget extends StatelessWidget {
   const TemperatureHumidityWidget(
@@ -13,10 +17,43 @@ class TemperatureHumidityWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AutoSizeText(
-      '$temperature $temp" | $humidity $humd%',
-      style: TextStyles.nunitoSans400
-          .copyWith(color: Colors.black.withOpacity(0.4), fontSize: 12),
-    );
+    return BlocConsumer<WeatherBloc, WeatherState>(
+        listener: (context, state) {},
+        builder: (context, state) {
+          Widget? child;
+
+          switch (state.status) {
+            case WeatherStatus.loading:
+              child = const LoadingWidget();
+              break;
+
+            case WeatherStatus.initial:
+              child = const LoadingWidget();
+              break;
+
+            case WeatherStatus.failure:
+              child = Center(
+                  child: CustomErrorWidget(
+                refresh: () {
+                  //_refresh();
+                },
+                errorMessage: state.errorMessage!,
+              ));
+
+              break;
+
+            case WeatherStatus.success:
+              child = AutoSizeText(
+                '$temperature ${state.data?['main']['temp']}" | $humidity ${state.data?['main']['humidity']}%',
+                style: TextStyles.nunitoSans400.copyWith(
+                    color: Colors.black.withOpacity(0.4), fontSize: 12),
+              );
+
+              break;
+            default:
+          }
+
+          return child!;
+        });
   }
 }

@@ -47,6 +47,7 @@ dependencies:
   flutter_switch: ^0.3.2
   intl: ^0.17.0
   syncfusion_flutter_sliders: ^20.3.47
+  geolocator: ^9.0.2
 
 dev_dependencies:
   flutter_test:

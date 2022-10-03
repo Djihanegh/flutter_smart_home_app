@@ -20,14 +20,19 @@ class WeatherFacade with HttpHandlerMixin implements IWeatherFacade {
       final result =
           await getIt<WeatherApiService>().getCurrentWeather(lat, long, appId);
 
+      log(result.statusCode.toString());
+
       if (result.isSuccessful) {
         return right(result.body!);
       } else {
+        log("APIIIIII");
+        log(result.error.toString());
         // final ApiResponse response =
         //    ApiResponse.fromJson({"msg": result.error});
         return left(ServerFailure.apiFailure(msg: ""));
       }
     } catch (e) {
+      log(e.toString());
       return left(ServerFailure.serverError(msg: catchExceptions(result, e)));
     }
   }
