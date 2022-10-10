@@ -1,5 +1,5 @@
 # Smart Home App
-A home automation mobile application made using flutter &amp; dart 🏠
+A home automation mobile application made using flutter &amp; dart with clean architecture 🏠
 
 
 ##  Screenshots :camera:
