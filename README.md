@@ -25,6 +25,7 @@ A home automation mobile application made using flutter &amp; dart 🏠
 - Add new room.
 - Add new device.
 - Favorites screen.
+- Unit Tests.
 
 ## 🛠️ Installation Steps
 
