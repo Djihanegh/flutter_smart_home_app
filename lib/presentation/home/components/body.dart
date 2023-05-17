@@ -26,6 +26,7 @@ class _BodyState extends State<Body> with SingleTickerProviderStateMixin {
   TabController? tabController;
   Position? position;
   WeatherBloc? weatherBloc;
+  String errorMessage = '';
 
   @override
   void initState() {
@@ -41,19 +42,15 @@ class _BodyState extends State<Body> with SingleTickerProviderStateMixin {
       position = await Geolocator.getCurrentPosition(
           desiredAccuracy: LocationAccuracy.high);
       setState(() {});
+      onRefresh();
     } catch (e) {
-      log(e.toString());
+      errorMessage = e.toString();
     }
   }
 
   @override
   Widget build(BuildContext context) {
     SizeConfig().init(context);
-
-    if (position != null) {
-      weatherBloc!.add(GetCurrentWeather(
-          APIKeys.openWeatherAPIKey, position!.latitude, position!.longitude));
-    }
 
     return SafeArea(
         child: Padding(
@@ -66,11 +63,21 @@ class _BodyState extends State<Body> with SingleTickerProviderStateMixin {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       position != null
-                          ? const CustomHeader()
-                          : const LoadingWidget(),
-                      position != null
-                          ? const TemperatureHumidityWidget(temp: 0, humd: 43)
-                          : const LoadingWidget(),
+                          ? Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                CustomHeader(
+                                  onRefresh: () => onRefresh(),
+                                ),
+                                TemperatureHumidityWidget(
+                                  onRefresh: () => onRefresh(),
+                                )
+                              ],
+                            )
+                          : errorMessage.isNotEmpty
+                              ? Text(errorMessage)
+                              : const LoadingWidget(),
                       Padding(
                           padding: paddingAll(30),
                           child: TabBar(
@@ -106,5 +113,12 @@ class _BodyState extends State<Body> with SingleTickerProviderStateMixin {
                     ],
                   );
                 })));
+  }
+
+  void onRefresh() {
+    if (position != null) {
+      weatherBloc!.add(GetCurrentWeather(
+          APIKeys.openWeatherAPIKey, position!.latitude, position!.longitude));
+    }
   }
 }

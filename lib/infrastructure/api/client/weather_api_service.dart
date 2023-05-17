@@ -24,7 +24,7 @@ abstract class WeatherApiService extends ChopperService {
     final client = ChopperClient(
       baseUrl: url,
       client: http.IOClient(
-        HttpClient()..connectionTimeout = const Duration(seconds: 60),
+        HttpClient()..connectionTimeout = const Duration(seconds: 6000),
       ),
       services: [
         _$WeatherApiService(),

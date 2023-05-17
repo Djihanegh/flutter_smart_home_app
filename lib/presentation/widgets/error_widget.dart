@@ -19,13 +19,13 @@ class CustomErrorWidget extends StatelessWidget {
         IconButton(
           icon: const Icon(
             Icons.refresh,
-            color: Colors.white,
+            color: Colors.black,
           ),
           onPressed: () => refresh(),
         ),
         Text(
           errorMessage,
-          style: const TextStyle(fontSize: 15, color: Colors.white),
+          style: const TextStyle(fontSize: 15, color: Colors.black),
         ),
       ],
     ));

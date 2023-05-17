@@ -9,11 +9,11 @@ import '../../widgets/error_widget.dart';
 import '../../widgets/loading_widget.dart';
 
 class TemperatureHumidityWidget extends StatelessWidget {
-  const TemperatureHumidityWidget(
-      {Key? key, required this.temp, required this.humd})
-      : super(key: key);
-  final double temp;
-  final double humd;
+  const TemperatureHumidityWidget({
+    Key? key,
+    required this.onRefresh,
+  }) : super(key: key);
+  final Function onRefresh;
 
   @override
   Widget build(BuildContext context) {
@@ -24,21 +24,20 @@ class TemperatureHumidityWidget extends StatelessWidget {
 
           switch (state.status) {
             case WeatherStatus.loading:
-              child = const LoadingWidget();
+              child = const SizedBox.shrink(); // const LoadingWidget();
               break;
 
             case WeatherStatus.initial:
-              child = const LoadingWidget();
+              child = const SizedBox.shrink(); // const LoadingWidget();
               break;
 
             case WeatherStatus.failure:
-              child = Center(
+              child = const SizedBox.shrink();
+              /* Center(
                   child: CustomErrorWidget(
-                refresh: () {
-                  //_refresh();
-                },
+                refresh: () => onRefresh(),
                 errorMessage: state.errorMessage!,
-              ));
+              ));*/
 
               break;
 

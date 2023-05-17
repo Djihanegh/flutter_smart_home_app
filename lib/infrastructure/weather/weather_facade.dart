@@ -23,8 +23,6 @@ class WeatherFacade with HttpHandlerMixin implements IWeatherFacade {
       if (result.isSuccessful) {
         return right(result.body!);
       } else {
-        // final ApiResponse response =
-        //    ApiResponse.fromJson({"msg": result.error});
         return left(ServerFailure.apiFailure(msg: result.error.toString()));
       }
     } catch (e) {

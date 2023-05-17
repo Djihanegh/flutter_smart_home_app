@@ -48,6 +48,9 @@ dependencies:
   intl: ^0.17.0
   syncfusion_flutter_sliders: ^20.3.47
   geolocator: ^9.0.2
+  mockito: ^5.4.0
+  bloc_test: ^9.1.1
+  mocktail: ^0.3.0
 
 dev_dependencies:
   flutter_test:
