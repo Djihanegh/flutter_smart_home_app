@@ -8,7 +8,7 @@ import 'package:smart_home_app/presentation/widgets/loading_widget.dart';
 import 'package:smart_home_app/utils/app_colors.dart';
 
 import '../../../application/weather/weather_bloc.dart';
-import '../../../infrastructure/api/client/api_key.dart';
+import '../../../config/api_key.dart';
 import '../../../utils/app_style.dart';
 import '../../../utils/constants.dart';
 import '../../../utils/size_config.dart';

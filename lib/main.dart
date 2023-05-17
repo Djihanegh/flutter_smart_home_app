@@ -7,7 +7,7 @@ import 'package:logging/logging.dart';
 import 'package:smart_home_app/di/injection.dart';
 
 import 'application/weather/weather_bloc.dart';
-import 'config/routes.dart';
+import 'routes/routes.dart';
 import 'presentation/home/home.dart';
 
 void _setupLogging() {
