@@ -11,6 +11,8 @@ class MockWeatherRepository extends Mock implements IWeatherFacade {}
 
 const apiKey = APIKeys.openWeatherAPIKey;
 
+const invalidAPIKey = '${APIKeys.openWeatherAPIKey}3';
+
 const lat = 36.895345;
 const long = 7.758886;
 
@@ -45,6 +47,12 @@ const Map<String, dynamic> data = {
   "cod": 200
 };
 
+const Map<String, dynamic> invalidAPIKeyFailureResponse = {
+  "cod": 401,
+  "message":
+      "Invalid API key. Please see https://openweathermap.org/faq#error401 for more info."
+};
+
 void main() {
   late MockWeatherRepository weatherMock;
   late WeatherBloc bloc;
@@ -55,7 +63,7 @@ void main() {
   });
 
   blocTest(
-    'should emit [WeatherLoadingState, WeatherSuccessState] : success case',
+    'should emit [WeatherLoadingState, WeatherSuccessState] : success test',
     build: () {
       when(() => weatherMock.getCurrentWeather(apiKey, lat, long))
           .thenAnswer((_) async => const Right(data));
@@ -78,14 +86,15 @@ void main() {
   );
 
   blocTest(
-    'should emit [WeatherLoadingState, WeatherFailureState] : failure case',
+    'should emit [WeatherLoadingState, WeatherFailureState] : Invalid API key failure test',
     build: () {
-      when(() => weatherMock.getCurrentWeather(apiKey, lat, long))
-          .thenAnswer((_) async => const Left(ServerFailure.apiFailure()));
+      when(() => weatherMock.getCurrentWeather(invalidAPIKey, lat, long))
+          .thenAnswer((_) async => Left(ServerFailure.apiFailure(
+              msg: invalidAPIKeyFailureResponse['message'])));
       return bloc;
     },
     act: (dynamic b) =>
-        b.add(const WeatherEvent.getCurrentWeather(apiKey, lat, long)),
+        b.add(const WeatherEvent.getCurrentWeather(invalidAPIKey, lat, long)),
     expect: () => [
       WeatherState(
           getCurrentWeather: none(),
@@ -94,9 +103,9 @@ void main() {
           status: WeatherStatus.loading),
       WeatherState(
           getCurrentWeather: none(),
-          data: data,
-          status: WeatherStatus.success,
-          errorMessage: '')
+          data: {},
+          status: WeatherStatus.failure,
+          errorMessage: invalidAPIKeyFailureResponse['message'])
     ],
   );
 }

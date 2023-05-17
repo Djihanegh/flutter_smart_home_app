@@ -7,6 +7,7 @@ import 'package:smart_home_app/domain/core/failures.dart';
 import 'package:smart_home_app/infrastructure/api/client/weather_api_service.dart';
 
 import '../../di/injection.dart';
+import '../../domain/entities/api_response.dart';
 import '../../domain/weather/i_weather_facade.dart';
 import '../api/exception/exception.dart';
 
@@ -23,7 +24,9 @@ class WeatherFacade with HttpHandlerMixin implements IWeatherFacade {
       if (result.isSuccessful) {
         return right(result.body!);
       } else {
-        return left(ServerFailure.apiFailure(msg: result.error.toString()));
+        final ApiResponse response =
+            ApiResponse.fromJson({"msg": result.error});
+        return left(ServerFailure.apiFailure(msg: response.msg?['message']));
       }
     } catch (e) {
       return left(ServerFailure.serverError(msg: catchExceptions(result, e)));
