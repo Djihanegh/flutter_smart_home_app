@@ -22,13 +22,14 @@ class _$WeatherApiService extends WeatherApiService {
     double longitude,
     String appId,
   ) {
-    final $url = 'https://api.openweathermap.org/data/2.5/weather';
-    final $params = <String, dynamic>{
+    final Uri $url =
+        Uri.parse('https://api.openweathermap.org/data/2.5/weather');
+    final Map<String, dynamic> $params = <String, dynamic>{
       'lat': latitude,
       'lon': longitude,
       'appid': appId,
     };
-    final $request = Request(
+    final Request $request = Request(
       'GET',
       $url,
       client.baseUrl,

@@ -20,8 +20,9 @@ abstract class WeatherApiService extends ChopperService {
   );
 
   static WeatherApiService create() {
+    Uri url = Uri.parse('$weatherEndpoint/data/2.5');
     final client = ChopperClient(
-      baseUrl: '$weatherEndpoint/data/2.5',
+      baseUrl: url,
       client: http.IOClient(
         HttpClient()..connectionTimeout = const Duration(seconds: 60),
       ),

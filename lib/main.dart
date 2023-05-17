@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:injectable/injectable.dart';
 import 'package:logging/logging.dart';
-import 'package:smart_home_app/config/injection.dart';
+import 'package:smart_home_app/di/injection.dart';
 
 import 'application/weather/weather_bloc.dart';
 import 'config/routes.dart';

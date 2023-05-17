@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'room.dart';
 
@@ -41,7 +41,8 @@ mixin _$Room {
 /// @nodoc
 abstract class $RoomCopyWith<$Res> {
   factory $RoomCopyWith(Room value, $Res Function(Room) then) =
-      _$RoomCopyWithImpl<$Res>;
+      _$RoomCopyWithImpl<$Res, Room>;
+  @useResult
   $Res call(
       {String? roomId,
       String name,
@@ -52,48 +53,51 @@ abstract class $RoomCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$RoomCopyWithImpl<$Res> implements $RoomCopyWith<$Res> {
+class _$RoomCopyWithImpl<$Res, $Val extends Room>
+    implements $RoomCopyWith<$Res> {
   _$RoomCopyWithImpl(this._value, this._then);
 
-  final Room _value;
   // ignore: unused_field
-  final $Res Function(Room) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? roomId = freezed,
-    Object? name = freezed,
-    Object? image = freezed,
-    Object? subtitle = freezed,
-    Object? isActive = freezed,
+    Object? name = null,
+    Object? image = null,
+    Object? subtitle = null,
+    Object? isActive = null,
     Object? devices = freezed,
   }) {
     return _then(_value.copyWith(
-      roomId: roomId == freezed
+      roomId: freezed == roomId
           ? _value.roomId
           : roomId // ignore: cast_nullable_to_non_nullable
               as String?,
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      image: image == freezed
+      image: null == image
           ? _value.image
           : image // ignore: cast_nullable_to_non_nullable
               as String,
-      subtitle: subtitle == freezed
+      subtitle: null == subtitle
           ? _value.subtitle
           : subtitle // ignore: cast_nullable_to_non_nullable
               as String,
-      isActive: isActive == freezed
+      isActive: null == isActive
           ? _value.isActive
           : isActive // ignore: cast_nullable_to_non_nullable
               as bool,
-      devices: devices == freezed
+      devices: freezed == devices
           ? _value.devices
           : devices // ignore: cast_nullable_to_non_nullable
               as List<Device>?,
-    ));
+    ) as $Val);
   }
 }
 
@@ -102,6 +106,7 @@ abstract class _$$_RoomCopyWith<$Res> implements $RoomCopyWith<$Res> {
   factory _$$_RoomCopyWith(_$_Room value, $Res Function(_$_Room) then) =
       __$$_RoomCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String? roomId,
       String name,
@@ -112,45 +117,43 @@ abstract class _$$_RoomCopyWith<$Res> implements $RoomCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_RoomCopyWithImpl<$Res> extends _$RoomCopyWithImpl<$Res>
+class __$$_RoomCopyWithImpl<$Res> extends _$RoomCopyWithImpl<$Res, _$_Room>
     implements _$$_RoomCopyWith<$Res> {
   __$$_RoomCopyWithImpl(_$_Room _value, $Res Function(_$_Room) _then)
-      : super(_value, (v) => _then(v as _$_Room));
+      : super(_value, _then);
 
-  @override
-  _$_Room get _value => super._value as _$_Room;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? roomId = freezed,
-    Object? name = freezed,
-    Object? image = freezed,
-    Object? subtitle = freezed,
-    Object? isActive = freezed,
+    Object? name = null,
+    Object? image = null,
+    Object? subtitle = null,
+    Object? isActive = null,
     Object? devices = freezed,
   }) {
     return _then(_$_Room(
-      roomId: roomId == freezed
+      roomId: freezed == roomId
           ? _value.roomId
           : roomId // ignore: cast_nullable_to_non_nullable
               as String?,
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      image: image == freezed
+      image: null == image
           ? _value.image
           : image // ignore: cast_nullable_to_non_nullable
               as String,
-      subtitle: subtitle == freezed
+      subtitle: null == subtitle
           ? _value.subtitle
           : subtitle // ignore: cast_nullable_to_non_nullable
               as String,
-      isActive: isActive == freezed
+      isActive: null == isActive
           ? _value.isActive
           : isActive // ignore: cast_nullable_to_non_nullable
               as bool,
-      devices: devices == freezed
+      devices: freezed == devices
           ? _value.devices
           : devices // ignore: cast_nullable_to_non_nullable
               as List<Device>?,
@@ -191,6 +194,7 @@ class _$_Room implements _Room {
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_RoomCopyWith<_$_Room> get copyWith =>
       __$$_RoomCopyWithImpl<_$_Room>(this, _$identity);
 

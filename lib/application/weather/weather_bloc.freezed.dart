@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'weather_bloc.dart';
 
@@ -27,7 +27,7 @@ mixin _$WeatherEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(String appId, double lat, double long)? getCurrentWeather,
+    TResult? Function(String appId, double lat, double long)? getCurrentWeather,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -43,7 +43,7 @@ mixin _$WeatherEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(GetCurrentWeather value)? getCurrentWeather,
+    TResult? Function(GetCurrentWeather value)? getCurrentWeather,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -62,38 +62,42 @@ mixin _$WeatherEvent {
 abstract class $WeatherEventCopyWith<$Res> {
   factory $WeatherEventCopyWith(
           WeatherEvent value, $Res Function(WeatherEvent) then) =
-      _$WeatherEventCopyWithImpl<$Res>;
+      _$WeatherEventCopyWithImpl<$Res, WeatherEvent>;
+  @useResult
   $Res call({String appId, double lat, double long});
 }
 
 /// @nodoc
-class _$WeatherEventCopyWithImpl<$Res> implements $WeatherEventCopyWith<$Res> {
+class _$WeatherEventCopyWithImpl<$Res, $Val extends WeatherEvent>
+    implements $WeatherEventCopyWith<$Res> {
   _$WeatherEventCopyWithImpl(this._value, this._then);
 
-  final WeatherEvent _value;
   // ignore: unused_field
-  final $Res Function(WeatherEvent) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? appId = freezed,
-    Object? lat = freezed,
-    Object? long = freezed,
+    Object? appId = null,
+    Object? lat = null,
+    Object? long = null,
   }) {
     return _then(_value.copyWith(
-      appId: appId == freezed
+      appId: null == appId
           ? _value.appId
           : appId // ignore: cast_nullable_to_non_nullable
               as String,
-      lat: lat == freezed
+      lat: null == lat
           ? _value.lat
           : lat // ignore: cast_nullable_to_non_nullable
               as double,
-      long: long == freezed
+      long: null == long
           ? _value.long
           : long // ignore: cast_nullable_to_non_nullable
               as double,
-    ));
+    ) as $Val);
   }
 }
 
@@ -104,36 +108,35 @@ abstract class _$$GetCurrentWeatherCopyWith<$Res>
           _$GetCurrentWeather value, $Res Function(_$GetCurrentWeather) then) =
       __$$GetCurrentWeatherCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String appId, double lat, double long});
 }
 
 /// @nodoc
 class __$$GetCurrentWeatherCopyWithImpl<$Res>
-    extends _$WeatherEventCopyWithImpl<$Res>
+    extends _$WeatherEventCopyWithImpl<$Res, _$GetCurrentWeather>
     implements _$$GetCurrentWeatherCopyWith<$Res> {
   __$$GetCurrentWeatherCopyWithImpl(
       _$GetCurrentWeather _value, $Res Function(_$GetCurrentWeather) _then)
-      : super(_value, (v) => _then(v as _$GetCurrentWeather));
+      : super(_value, _then);
 
-  @override
-  _$GetCurrentWeather get _value => super._value as _$GetCurrentWeather;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? appId = freezed,
-    Object? lat = freezed,
-    Object? long = freezed,
+    Object? appId = null,
+    Object? lat = null,
+    Object? long = null,
   }) {
     return _then(_$GetCurrentWeather(
-      appId == freezed
+      null == appId
           ? _value.appId
           : appId // ignore: cast_nullable_to_non_nullable
               as String,
-      lat == freezed
+      null == lat
           ? _value.lat
           : lat // ignore: cast_nullable_to_non_nullable
               as double,
-      long == freezed
+      null == long
           ? _value.long
           : long // ignore: cast_nullable_to_non_nullable
               as double,
@@ -163,20 +166,17 @@ class _$GetCurrentWeather implements GetCurrentWeather {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$GetCurrentWeather &&
-            const DeepCollectionEquality().equals(other.appId, appId) &&
-            const DeepCollectionEquality().equals(other.lat, lat) &&
-            const DeepCollectionEquality().equals(other.long, long));
+            (identical(other.appId, appId) || other.appId == appId) &&
+            (identical(other.lat, lat) || other.lat == lat) &&
+            (identical(other.long, long) || other.long == long));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(appId),
-      const DeepCollectionEquality().hash(lat),
-      const DeepCollectionEquality().hash(long));
+  int get hashCode => Object.hash(runtimeType, appId, lat, long);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$GetCurrentWeatherCopyWith<_$GetCurrentWeather> get copyWith =>
       __$$GetCurrentWeatherCopyWithImpl<_$GetCurrentWeather>(this, _$identity);
 
@@ -192,7 +192,7 @@ class _$GetCurrentWeather implements GetCurrentWeather {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(String appId, double lat, double long)? getCurrentWeather,
+    TResult? Function(String appId, double lat, double long)? getCurrentWeather,
   }) {
     return getCurrentWeather?.call(appId, lat, long);
   }
@@ -220,7 +220,7 @@ class _$GetCurrentWeather implements GetCurrentWeather {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(GetCurrentWeather value)? getCurrentWeather,
+    TResult? Function(GetCurrentWeather value)? getCurrentWeather,
   }) {
     return getCurrentWeather?.call(this);
   }
@@ -272,7 +272,8 @@ mixin _$WeatherState {
 abstract class $WeatherStateCopyWith<$Res> {
   factory $WeatherStateCopyWith(
           WeatherState value, $Res Function(WeatherState) then) =
-      _$WeatherStateCopyWithImpl<$Res>;
+      _$WeatherStateCopyWithImpl<$Res, WeatherState>;
+  @useResult
   $Res call(
       {Option<Either<ServerFailure, Map<String, dynamic>>>? getCurrentWeather,
       Map<String, dynamic>? data,
@@ -281,38 +282,41 @@ abstract class $WeatherStateCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$WeatherStateCopyWithImpl<$Res> implements $WeatherStateCopyWith<$Res> {
+class _$WeatherStateCopyWithImpl<$Res, $Val extends WeatherState>
+    implements $WeatherStateCopyWith<$Res> {
   _$WeatherStateCopyWithImpl(this._value, this._then);
 
-  final WeatherState _value;
   // ignore: unused_field
-  final $Res Function(WeatherState) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? getCurrentWeather = freezed,
     Object? data = freezed,
-    Object? status = freezed,
+    Object? status = null,
     Object? errorMessage = freezed,
   }) {
     return _then(_value.copyWith(
-      getCurrentWeather: getCurrentWeather == freezed
+      getCurrentWeather: freezed == getCurrentWeather
           ? _value.getCurrentWeather
           : getCurrentWeather // ignore: cast_nullable_to_non_nullable
               as Option<Either<ServerFailure, Map<String, dynamic>>>?,
-      data: data == freezed
+      data: freezed == data
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>?,
-      status: status == freezed
+      status: null == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
               as WeatherStatus,
-      errorMessage: errorMessage == freezed
+      errorMessage: freezed == errorMessage
           ? _value.errorMessage
           : errorMessage // ignore: cast_nullable_to_non_nullable
               as String?,
-    ));
+    ) as $Val);
   }
 }
 
@@ -323,6 +327,7 @@ abstract class _$$_WeatherStateCopyWith<$Res>
           _$_WeatherState value, $Res Function(_$_WeatherState) then) =
       __$$_WeatherStateCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {Option<Either<ServerFailure, Map<String, dynamic>>>? getCurrentWeather,
       Map<String, dynamic>? data,
@@ -332,36 +337,34 @@ abstract class _$$_WeatherStateCopyWith<$Res>
 
 /// @nodoc
 class __$$_WeatherStateCopyWithImpl<$Res>
-    extends _$WeatherStateCopyWithImpl<$Res>
+    extends _$WeatherStateCopyWithImpl<$Res, _$_WeatherState>
     implements _$$_WeatherStateCopyWith<$Res> {
   __$$_WeatherStateCopyWithImpl(
       _$_WeatherState _value, $Res Function(_$_WeatherState) _then)
-      : super(_value, (v) => _then(v as _$_WeatherState));
+      : super(_value, _then);
 
-  @override
-  _$_WeatherState get _value => super._value as _$_WeatherState;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? getCurrentWeather = freezed,
     Object? data = freezed,
-    Object? status = freezed,
+    Object? status = null,
     Object? errorMessage = freezed,
   }) {
     return _then(_$_WeatherState(
-      getCurrentWeather: getCurrentWeather == freezed
+      getCurrentWeather: freezed == getCurrentWeather
           ? _value.getCurrentWeather
           : getCurrentWeather // ignore: cast_nullable_to_non_nullable
               as Option<Either<ServerFailure, Map<String, dynamic>>>?,
-      data: data == freezed
+      data: freezed == data
           ? _value._data
           : data // ignore: cast_nullable_to_non_nullable
               as Map<String, dynamic>?,
-      status: status == freezed
+      status: null == status
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
               as WeatherStatus,
-      errorMessage: errorMessage == freezed
+      errorMessage: freezed == errorMessage
           ? _value.errorMessage
           : errorMessage // ignore: cast_nullable_to_non_nullable
               as String?,
@@ -386,6 +389,7 @@ class _$_WeatherState implements _WeatherState {
   Map<String, dynamic>? get data {
     final value = _data;
     if (value == null) return null;
+    if (_data is EqualUnmodifiableMapView) return _data;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableMapView(value);
   }
@@ -406,24 +410,21 @@ class _$_WeatherState implements _WeatherState {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_WeatherState &&
-            const DeepCollectionEquality()
-                .equals(other.getCurrentWeather, getCurrentWeather) &&
+            (identical(other.getCurrentWeather, getCurrentWeather) ||
+                other.getCurrentWeather == getCurrentWeather) &&
             const DeepCollectionEquality().equals(other._data, _data) &&
-            const DeepCollectionEquality().equals(other.status, status) &&
-            const DeepCollectionEquality()
-                .equals(other.errorMessage, errorMessage));
+            (identical(other.status, status) || other.status == status) &&
+            (identical(other.errorMessage, errorMessage) ||
+                other.errorMessage == errorMessage));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(getCurrentWeather),
-      const DeepCollectionEquality().hash(_data),
-      const DeepCollectionEquality().hash(status),
-      const DeepCollectionEquality().hash(errorMessage));
+  int get hashCode => Object.hash(runtimeType, getCurrentWeather,
+      const DeepCollectionEquality().hash(_data), status, errorMessage);
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_WeatherStateCopyWith<_$_WeatherState> get copyWith =>
       __$$_WeatherStateCopyWithImpl<_$_WeatherState>(this, _$identity);
 }

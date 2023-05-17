@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'failures.dart';
 
@@ -25,8 +25,8 @@ mixin _$ServerFailure<T> {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(T? msg)? serverError,
-    TResult Function(T? msg)? apiFailure,
+    TResult? Function(T? msg)? serverError,
+    TResult? Function(T? msg)? apiFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -44,8 +44,8 @@ mixin _$ServerFailure<T> {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(ServerError<T> value)? serverError,
-    TResult Function(ApiFailure<T> value)? apiFailure,
+    TResult? Function(ServerError<T> value)? serverError,
+    TResult? Function(ApiFailure<T> value)? apiFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -65,29 +65,32 @@ mixin _$ServerFailure<T> {
 abstract class $ServerFailureCopyWith<T, $Res> {
   factory $ServerFailureCopyWith(
           ServerFailure<T> value, $Res Function(ServerFailure<T>) then) =
-      _$ServerFailureCopyWithImpl<T, $Res>;
+      _$ServerFailureCopyWithImpl<T, $Res, ServerFailure<T>>;
+  @useResult
   $Res call({T? msg});
 }
 
 /// @nodoc
-class _$ServerFailureCopyWithImpl<T, $Res>
+class _$ServerFailureCopyWithImpl<T, $Res, $Val extends ServerFailure<T>>
     implements $ServerFailureCopyWith<T, $Res> {
   _$ServerFailureCopyWithImpl(this._value, this._then);
 
-  final ServerFailure<T> _value;
   // ignore: unused_field
-  final $Res Function(ServerFailure<T>) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? msg = freezed,
   }) {
     return _then(_value.copyWith(
-      msg: msg == freezed
+      msg: freezed == msg
           ? _value.msg
           : msg // ignore: cast_nullable_to_non_nullable
               as T?,
-    ));
+    ) as $Val);
   }
 }
 
@@ -98,26 +101,25 @@ abstract class _$$ServerErrorCopyWith<T, $Res>
           _$ServerError<T> value, $Res Function(_$ServerError<T>) then) =
       __$$ServerErrorCopyWithImpl<T, $Res>;
   @override
+  @useResult
   $Res call({T? msg});
 }
 
 /// @nodoc
 class __$$ServerErrorCopyWithImpl<T, $Res>
-    extends _$ServerFailureCopyWithImpl<T, $Res>
+    extends _$ServerFailureCopyWithImpl<T, $Res, _$ServerError<T>>
     implements _$$ServerErrorCopyWith<T, $Res> {
   __$$ServerErrorCopyWithImpl(
       _$ServerError<T> _value, $Res Function(_$ServerError<T>) _then)
-      : super(_value, (v) => _then(v as _$ServerError<T>));
+      : super(_value, _then);
 
-  @override
-  _$ServerError<T> get _value => super._value as _$ServerError<T>;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? msg = freezed,
   }) {
     return _then(_$ServerError<T>(
-      msg: msg == freezed
+      msg: freezed == msg
           ? _value.msg
           : msg // ignore: cast_nullable_to_non_nullable
               as T?,
@@ -152,6 +154,7 @@ class _$ServerError<T> implements ServerError<T> {
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$ServerErrorCopyWith<T, _$ServerError<T>> get copyWith =>
       __$$ServerErrorCopyWithImpl<T, _$ServerError<T>>(this, _$identity);
 
@@ -167,8 +170,8 @@ class _$ServerError<T> implements ServerError<T> {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(T? msg)? serverError,
-    TResult Function(T? msg)? apiFailure,
+    TResult? Function(T? msg)? serverError,
+    TResult? Function(T? msg)? apiFailure,
   }) {
     return serverError?.call(msg);
   }
@@ -198,8 +201,8 @@ class _$ServerError<T> implements ServerError<T> {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(ServerError<T> value)? serverError,
-    TResult Function(ApiFailure<T> value)? apiFailure,
+    TResult? Function(ServerError<T> value)? serverError,
+    TResult? Function(ApiFailure<T> value)? apiFailure,
   }) {
     return serverError?.call(this);
   }
@@ -236,26 +239,25 @@ abstract class _$$ApiFailureCopyWith<T, $Res>
           _$ApiFailure<T> value, $Res Function(_$ApiFailure<T>) then) =
       __$$ApiFailureCopyWithImpl<T, $Res>;
   @override
+  @useResult
   $Res call({T? msg});
 }
 
 /// @nodoc
 class __$$ApiFailureCopyWithImpl<T, $Res>
-    extends _$ServerFailureCopyWithImpl<T, $Res>
+    extends _$ServerFailureCopyWithImpl<T, $Res, _$ApiFailure<T>>
     implements _$$ApiFailureCopyWith<T, $Res> {
   __$$ApiFailureCopyWithImpl(
       _$ApiFailure<T> _value, $Res Function(_$ApiFailure<T>) _then)
-      : super(_value, (v) => _then(v as _$ApiFailure<T>));
+      : super(_value, _then);
 
-  @override
-  _$ApiFailure<T> get _value => super._value as _$ApiFailure<T>;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? msg = freezed,
   }) {
     return _then(_$ApiFailure<T>(
-      msg: msg == freezed
+      msg: freezed == msg
           ? _value.msg
           : msg // ignore: cast_nullable_to_non_nullable
               as T?,
@@ -290,6 +292,7 @@ class _$ApiFailure<T> implements ApiFailure<T> {
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$ApiFailureCopyWith<T, _$ApiFailure<T>> get copyWith =>
       __$$ApiFailureCopyWithImpl<T, _$ApiFailure<T>>(this, _$identity);
 
@@ -305,8 +308,8 @@ class _$ApiFailure<T> implements ApiFailure<T> {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(T? msg)? serverError,
-    TResult Function(T? msg)? apiFailure,
+    TResult? Function(T? msg)? serverError,
+    TResult? Function(T? msg)? apiFailure,
   }) {
     return apiFailure?.call(msg);
   }
@@ -336,8 +339,8 @@ class _$ApiFailure<T> implements ApiFailure<T> {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(ServerError<T> value)? serverError,
-    TResult Function(ApiFailure<T> value)? apiFailure,
+    TResult? Function(ServerError<T> value)? serverError,
+    TResult? Function(ApiFailure<T> value)? apiFailure,
   }) {
     return apiFailure?.call(this);
   }

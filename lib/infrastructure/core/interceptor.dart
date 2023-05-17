@@ -8,7 +8,7 @@ class Interceptor implements RequestInterceptor {
     Request modified = Request(
       request.method,
       request.url,
-      request.baseUrl,
+      request.baseUri,
       body: request.body,
       headers: request.headers,
       multipart: request.multipart,

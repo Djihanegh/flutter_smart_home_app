@@ -6,7 +6,7 @@ import 'package:injectable/injectable.dart';
 import 'package:smart_home_app/domain/core/failures.dart';
 import 'package:smart_home_app/infrastructure/api/client/weather_api_service.dart';
 
-import '../../config/injection.dart';
+import '../../di/injection.dart';
 import '../../domain/weather/i_weather_facade.dart';
 import '../api/exception/exception.dart';
 

@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'device.dart';
 
@@ -41,7 +41,8 @@ mixin _$Device {
 /// @nodoc
 abstract class $DeviceCopyWith<$Res> {
   factory $DeviceCopyWith(Device value, $Res Function(Device) then) =
-      _$DeviceCopyWithImpl<$Res>;
+      _$DeviceCopyWithImpl<$Res, Device>;
+  @useResult
   $Res call(
       {String id,
       String? roomId,
@@ -52,48 +53,51 @@ abstract class $DeviceCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$DeviceCopyWithImpl<$Res> implements $DeviceCopyWith<$Res> {
+class _$DeviceCopyWithImpl<$Res, $Val extends Device>
+    implements $DeviceCopyWith<$Res> {
   _$DeviceCopyWithImpl(this._value, this._then);
 
-  final Device _value;
   // ignore: unused_field
-  final $Res Function(Device) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
+    Object? id = null,
     Object? roomId = freezed,
-    Object? name = freezed,
-    Object? image = freezed,
-    Object? subtitle = freezed,
-    Object? isActive = freezed,
+    Object? name = null,
+    Object? image = null,
+    Object? subtitle = null,
+    Object? isActive = null,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
-      roomId: roomId == freezed
+      roomId: freezed == roomId
           ? _value.roomId
           : roomId // ignore: cast_nullable_to_non_nullable
               as String?,
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      image: image == freezed
+      image: null == image
           ? _value.image
           : image // ignore: cast_nullable_to_non_nullable
               as String,
-      subtitle: subtitle == freezed
+      subtitle: null == subtitle
           ? _value.subtitle
           : subtitle // ignore: cast_nullable_to_non_nullable
               as String,
-      isActive: isActive == freezed
+      isActive: null == isActive
           ? _value.isActive
           : isActive // ignore: cast_nullable_to_non_nullable
               as bool,
-    ));
+    ) as $Val);
   }
 }
 
@@ -102,6 +106,7 @@ abstract class _$$_DeviceCopyWith<$Res> implements $DeviceCopyWith<$Res> {
   factory _$$_DeviceCopyWith(_$_Device value, $Res Function(_$_Device) then) =
       __$$_DeviceCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String id,
       String? roomId,
@@ -112,45 +117,44 @@ abstract class _$$_DeviceCopyWith<$Res> implements $DeviceCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_DeviceCopyWithImpl<$Res> extends _$DeviceCopyWithImpl<$Res>
+class __$$_DeviceCopyWithImpl<$Res>
+    extends _$DeviceCopyWithImpl<$Res, _$_Device>
     implements _$$_DeviceCopyWith<$Res> {
   __$$_DeviceCopyWithImpl(_$_Device _value, $Res Function(_$_Device) _then)
-      : super(_value, (v) => _then(v as _$_Device));
+      : super(_value, _then);
 
-  @override
-  _$_Device get _value => super._value as _$_Device;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? id = freezed,
+    Object? id = null,
     Object? roomId = freezed,
-    Object? name = freezed,
-    Object? image = freezed,
-    Object? subtitle = freezed,
-    Object? isActive = freezed,
+    Object? name = null,
+    Object? image = null,
+    Object? subtitle = null,
+    Object? isActive = null,
   }) {
     return _then(_$_Device(
-      id: id == freezed
+      id: null == id
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
-      roomId: roomId == freezed
+      roomId: freezed == roomId
           ? _value.roomId
           : roomId // ignore: cast_nullable_to_non_nullable
               as String?,
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      image: image == freezed
+      image: null == image
           ? _value.image
           : image // ignore: cast_nullable_to_non_nullable
               as String,
-      subtitle: subtitle == freezed
+      subtitle: null == subtitle
           ? _value.subtitle
           : subtitle // ignore: cast_nullable_to_non_nullable
               as String,
-      isActive: isActive == freezed
+      isActive: null == isActive
           ? _value.isActive
           : isActive // ignore: cast_nullable_to_non_nullable
               as bool,
@@ -192,6 +196,7 @@ class _$_Device implements _Device {
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_DeviceCopyWith<_$_Device> get copyWith =>
       __$$_DeviceCopyWithImpl<_$_Device>(this, _$identity);
 

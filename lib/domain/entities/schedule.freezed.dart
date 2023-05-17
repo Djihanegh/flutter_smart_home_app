@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'schedule.dart';
 
@@ -46,7 +46,8 @@ mixin _$Schedule {
 /// @nodoc
 abstract class $ScheduleCopyWith<$Res> {
   factory $ScheduleCopyWith(Schedule value, $Res Function(Schedule) then) =
-      _$ScheduleCopyWithImpl<$Res>;
+      _$ScheduleCopyWithImpl<$Res, Schedule>;
+  @useResult
   $Res call(
       {String? scheduleId,
       DateTime startTime,
@@ -59,58 +60,61 @@ abstract class $ScheduleCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$ScheduleCopyWithImpl<$Res> implements $ScheduleCopyWith<$Res> {
+class _$ScheduleCopyWithImpl<$Res, $Val extends Schedule>
+    implements $ScheduleCopyWith<$Res> {
   _$ScheduleCopyWithImpl(this._value, this._then);
 
-  final Schedule _value;
   // ignore: unused_field
-  final $Res Function(Schedule) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? scheduleId = freezed,
-    Object? startTime = freezed,
-    Object? image = freezed,
-    Object? name = freezed,
-    Object? endTime = freezed,
-    Object? isActive = freezed,
+    Object? startTime = null,
+    Object? image = null,
+    Object? name = null,
+    Object? endTime = null,
+    Object? isActive = null,
     Object? devices = freezed,
     Object? days = freezed,
   }) {
     return _then(_value.copyWith(
-      scheduleId: scheduleId == freezed
+      scheduleId: freezed == scheduleId
           ? _value.scheduleId
           : scheduleId // ignore: cast_nullable_to_non_nullable
               as String?,
-      startTime: startTime == freezed
+      startTime: null == startTime
           ? _value.startTime
           : startTime // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      image: image == freezed
+      image: null == image
           ? _value.image
           : image // ignore: cast_nullable_to_non_nullable
               as String,
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      endTime: endTime == freezed
+      endTime: null == endTime
           ? _value.endTime
           : endTime // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      isActive: isActive == freezed
+      isActive: null == isActive
           ? _value.isActive
           : isActive // ignore: cast_nullable_to_non_nullable
               as bool,
-      devices: devices == freezed
+      devices: freezed == devices
           ? _value.devices
           : devices // ignore: cast_nullable_to_non_nullable
               as List<Device>?,
-      days: days == freezed
+      days: freezed == days
           ? _value.days
           : days // ignore: cast_nullable_to_non_nullable
               as List<String>?,
-    ));
+    ) as $Val);
   }
 }
 
@@ -120,6 +124,7 @@ abstract class _$$_ScheduleCopyWith<$Res> implements $ScheduleCopyWith<$Res> {
           _$_Schedule value, $Res Function(_$_Schedule) then) =
       __$$_ScheduleCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String? scheduleId,
       DateTime startTime,
@@ -132,56 +137,55 @@ abstract class _$$_ScheduleCopyWith<$Res> implements $ScheduleCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_ScheduleCopyWithImpl<$Res> extends _$ScheduleCopyWithImpl<$Res>
+class __$$_ScheduleCopyWithImpl<$Res>
+    extends _$ScheduleCopyWithImpl<$Res, _$_Schedule>
     implements _$$_ScheduleCopyWith<$Res> {
   __$$_ScheduleCopyWithImpl(
       _$_Schedule _value, $Res Function(_$_Schedule) _then)
-      : super(_value, (v) => _then(v as _$_Schedule));
+      : super(_value, _then);
 
-  @override
-  _$_Schedule get _value => super._value as _$_Schedule;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
     Object? scheduleId = freezed,
-    Object? startTime = freezed,
-    Object? image = freezed,
-    Object? name = freezed,
-    Object? endTime = freezed,
-    Object? isActive = freezed,
+    Object? startTime = null,
+    Object? image = null,
+    Object? name = null,
+    Object? endTime = null,
+    Object? isActive = null,
     Object? devices = freezed,
     Object? days = freezed,
   }) {
     return _then(_$_Schedule(
-      scheduleId: scheduleId == freezed
+      scheduleId: freezed == scheduleId
           ? _value.scheduleId
           : scheduleId // ignore: cast_nullable_to_non_nullable
               as String?,
-      startTime: startTime == freezed
+      startTime: null == startTime
           ? _value.startTime
           : startTime // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      image: image == freezed
+      image: null == image
           ? _value.image
           : image // ignore: cast_nullable_to_non_nullable
               as String,
-      name: name == freezed
+      name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
-      endTime: endTime == freezed
+      endTime: null == endTime
           ? _value.endTime
           : endTime // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      isActive: isActive == freezed
+      isActive: null == isActive
           ? _value.isActive
           : isActive // ignore: cast_nullable_to_non_nullable
               as bool,
-      devices: devices == freezed
+      devices: freezed == devices
           ? _value.devices
           : devices // ignore: cast_nullable_to_non_nullable
               as List<Device>?,
-      days: days == freezed
+      days: freezed == days
           ? _value.days
           : days // ignore: cast_nullable_to_non_nullable
               as List<String>?,
@@ -229,6 +233,7 @@ class _$_Schedule implements _Schedule {
 
   @JsonKey(ignore: true)
   @override
+  @pragma('vm:prefer-inline')
   _$$_ScheduleCopyWith<_$_Schedule> get copyWith =>
       __$$_ScheduleCopyWithImpl<_$_Schedule>(this, _$identity);
 
