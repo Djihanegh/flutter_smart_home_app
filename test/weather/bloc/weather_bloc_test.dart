@@ -63,7 +63,7 @@ void main() {
   });
 
   blocTest(
-    'should emit [WeatherLoadingState, WeatherSuccessState] : success test',
+    'should emit [WeatherLoadingState, WeatherSuccessState] for successful weather data loads',
     build: () {
       when(() => weatherMock.getCurrentWeather(apiKey, lat, long))
           .thenAnswer((_) async => const Right(data));
@@ -86,7 +86,7 @@ void main() {
   );
 
   blocTest(
-    'should emit [WeatherLoadingState, WeatherFailureState] : Invalid API key failure test',
+    'should emit [WeatherLoadingState, WeatherFailureState] when the API key is Invalid !',
     build: () {
       when(() => weatherMock.getCurrentWeather(invalidAPIKey, lat, long))
           .thenAnswer((_) async => Left(ServerFailure.apiFailure(
@@ -108,4 +108,8 @@ void main() {
           errorMessage: invalidAPIKeyFailureResponse['message'])
     ],
   );
+
+  tearDown(() {
+    bloc.close();
+  });
 }
