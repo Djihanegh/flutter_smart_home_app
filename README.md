@@ -20,12 +20,12 @@ A home automation mobile application made using flutter &amp; dart with clean ar
  - [Injectable](https://pub.dev/packages/injectable) and [GetIt](https://pub.dev/packages/get_it) for Dependency injection.
  
  ## Still to do : 
-- Profile screen.
-- Complete schedule screen.
-- Add new room.
-- Add new device.
-- Favorites screen.
-- Unit Tests.
+- [ ] Profile screen.
+- [ ] Complete schedule screen.
+- [ ] Add new room.
+- [ ] Add new device.
+- [ ] Favorites screen.
+- [x] Unit Tests.
 
 ## 🛠️ Installation Steps
 
