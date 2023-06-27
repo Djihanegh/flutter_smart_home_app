@@ -5,17 +5,15 @@ A home automation mobile application made using flutter &amp; dart with clean ar
 ### Show some ❤️ and star the repo to support the project.
 -------------
 ###  Note
--------------
+
 
 This repository is still under development and I will continue to add more features to it.
 
--------------
 
 ##  Screenshots :camera:
 
 ![Component 1](https://github.com/Djihanegh/flutter_smart_home_app/assets/40029149/8770be5d-0700-4b94-a654-dc3420da01cf)
 
-------------
 
 ## Technologies Used : 
 
@@ -55,7 +53,7 @@ This repository is still under development and I will continue to add more featu
 ```
 
 ## How to Contribute
--------------
+
 1. Fork the the project
 2. Create your feature branch (git checkout -b my-new-feature)
 3. Make required changes and commit (git commit -am 'Add some feature')
