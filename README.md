@@ -1,15 +1,21 @@
 # Flutter Smart Home App
 A home automation mobile application made using flutter &amp; dart with clean architecture 🏠
 
+-------------
+### Show some ❤️ and star the repo to support the project.
+-------------
+###  Note
+-------------
+
+This repository is still under development and I will continue to add more features to it.
+
+-------------
 
 ##  Screenshots :camera:
-![Screenshot_1664824085](https://user-images.githubusercontent.com/40029149/193697613-7749011b-f3b3-4bf4-9f1e-c812eae95599.png)
-![Screenshot_1664824092](https://user-images.githubusercontent.com/40029149/193697645-cf08c323-e4cc-4e50-9619-cefa64191967.png)
 
-![310304890_1277492813064177_5324029285141342574_n](https://user-images.githubusercontent.com/40029149/193697569-c75f4699-1784-431b-ad5d-4af975005dd3.jpg)
+![Component 1](https://github.com/Djihanegh/flutter_smart_home_app/assets/40029149/8770be5d-0700-4b94-a654-dc3420da01cf)
 
-![Screenshot_1664824109](https://user-images.githubusercontent.com/40029149/193697674-42106d2e-2ef6-40fe-ba82-7a317ce05d7d.png)
-
+------------
 
 ## Technologies Used : 
 
@@ -47,3 +53,11 @@ A home automation mobile application made using flutter &amp; dart with clean ar
 ```
   Happy Coding !!
 ```
+
+## How to Contribute
+-------------
+1. Fork the the project
+2. Create your feature branch (git checkout -b my-new-feature)
+3. Make required changes and commit (git commit -am 'Add some feature')
+4. Push to the branch (git push origin my-new-feature)
+5. Create new Pull Request
